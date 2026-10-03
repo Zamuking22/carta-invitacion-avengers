@@ -1599,20 +1599,41 @@ body::after {
  
 
 
-    .carta.abierta {
-        width:
-            calc(
-                100vw - 24px
-            );
+  .carta.abierta {
+    position: fixed;
 
-        max-height:
-            calc(
-                100dvh - 24px
-            );
+    top: 50%;
+    left: 50%;
 
-        border-radius: 16px;
+    right: auto;
+    bottom: auto;
+
+    width: calc(100vw - 20px);
+
+    max-height: calc(100vh - 20px);
+
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+
+    overflow-y: auto;
+
+    border-radius: 16px;
+
+    animation: aparecerCartaMovil .28s ease forwards;
+}
+
+    @keyframes aparecerCartaMovil {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.96);
     }
 
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
 
     .contenido {
         padding:
