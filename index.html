@@ -1,35 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Carta para mamá</title>
+    <title>Invitación al cine</title>
 </head>
 <body>
-    <h1>¡Feliz Dia Mamá! ❤️</h1>
-    <div class="contenedor">
-        <div class="envoltura-sobre">
+    <div class="estrellas"></div>
+
+    <header class="encabezado">
+        <span class="mini">INICIATIVA AVENGERS</span>
+        <h1>¿Misión de cine?</h1>
+        <p>Abre el sobre. Hay una propuesta importante adentro </p>
+    </header>
+
+    <main class="contenedor">
+        <div class="envoltura-sobre" aria-label="Invitación al cine">
             <div class="sobre">
                 <div class="carta">
                     <div class="contenido">
-                        <strong>Querida Mamá</strong>
-                        <p>
-                            Hoy es <strong>Tu dia mamá</strong>, que nos enseñó con<em> amor</em>, la <em>paciencia</em> y sacrificio (como en las peliculas). Gracias, mamá, por ser refugio en los días difíciles, por cada sonrisa que nos regalaste aún en medio del cansancio y por tu fuerza que siempre nos inspira."<strong>te amo</strong>" y te aprecio <strong>con todo el corazon
-                                 </strong> Tu amor es el motor silencioso que impulsa mi vida. Nada en este mundo se compara con tu entrega y tu corazón. Hoy y siempre, te honrare, te agradecere por todo lo que eres y por lo que has hecho en mi vida. Gracias por hacer de mi vida una versión mejorada, aunque cometa errores siempre estas ahi para guiarme en todo el momneto. <br> <strong>Feliz Dia Mamá</strong>, mi <em>lugar seguro</em>. <br> Con mucho <strong>código</strong> (y <strong>amor</strong>), <br> Tu hijo  programador. <br> <span style="font-size: 0.9em; color: grey;">PD: Si esta carta fuera un programa, su salida sería:</span> <br> <code>"Gracias por darme la vida mamá, Te amo mucho mamá ❤️."</code>
+                        <div class="marca-avengers" aria-hidden="true">A</div>
+                        <span class="etiqueta">MISIÓN DISPONIBLE</span>
+                        <h2>AVENGERS: ENDGAME</h2>
+                        <p class="subtitulo">Reestreno en cine</p>
+
+                        <div class="separador"></div>
+
+                        <p class="mensaje">
+                            Se solicita compañía para una misión de alto riesgo:
+                            <strong>ver Endgame otra vez en pantalla grande</strong>, comer palomitas
+                            y fingir que no sabemos exactamente lo que va a pasar.
                         </p>
+
+                        <div class="datos">
+                            <div class="dato">
+                                <span>🎬</span>
+                                <div><small>PELÍCULA</small><strong>Avengers: Endgame</strong></div>
+                            </div>
+                            <div class="dato">
+                                <span>📅</span>
+                                <div><small>FECHA</small><strong>Mañana Domingo 4 de octubre</strong></div>
+                            </div>
+                            <div class="dato">
+                                <span>📍</span>
+                                <div><small>LUGAR</small><strong>Plaza el Dorado</strong></div>
+                            </div>
+                        </div>
+
+                        <p class="cierre">Entonces... <strong>¿te apuntas a la misión?</strong></p>
+
+                        <div class="acciones">
+                            <button class="btn btn-si" id="btnSi">Obvio :D</button>
+                            <button class="btn btn-duda" id="btnDuda">Déjame pensarlo :[ </button>
+                        </div>
+
+                        <div class="respuesta" id="respuesta" aria-live="polite"></div>
+
+                            <div class="zona-pd">
+                            <button id="btnPD" class="btn-pd">
+                                P.D. Hay algo más
+                            </button>
+                            
+                        </div>
                     </div>
+
                 </div>
             </div>
-            <div class="corazon"></div>
+            <div class="sello">
+                <span>A</span>
+            </div>
             <div class="solapa-derecha"></div>
             <div class="solapa-izquierda"></div>
         </div>
+        <p class="pista">Haz clic en el sello para abrir</p>
+    </main>
+        <!-- MODAL DEL P.D. -->
+    <div id="modalPD" class="modal-pd">
+
+        <div class="modal-pd-contenido">
+
+            <button
+                id="cerrarPD"
+                class="cerrar-pd"
+            >
+                ×
+            </button>
+
+
+            <span class="pd-label">
+                P.D.
+            </span>
+
+
+            <h2>
+                Una última cosa...
+            </h2>
+
+<p id="textoPD">
+
+    si aceptas salir, mandame mensaje para hablarlo y perdon por no poder en los dias que me dijiste,
+    realmente si quiero salir contigo, hace rato que no nos vemos como tambien no hemos platicado, solo espero que si puedas :D
+
+</p>
+
+<button id="btnFlores" class="btn-flores">
+    Tengo algo para ti 
+</button>
+
+<div id="ramoFlores" class="ramo-flores">
+
+    <div class="flor flor1">
+        <div class="petalo p1"></div>
+        <div class="petalo p2"></div>
+        <div class="petalo p3"></div>
+        <div class="petalo p4"></div>
+        <div class="centro-flor"></div>
     </div>
-    <!-- <script src="script_v2.js"></script> -->
-     <script src="script_v2.js"></script>
+
+    <div class="flor flor2">
+        <div class="petalo p1"></div>
+        <div class="petalo p2"></div>
+        <div class="petalo p3"></div>
+        <div class="petalo p4"></div>
+        <div class="centro-flor"></div>
+    </div>
+
+    <div class="flor flor3">
+        <div class="petalo p1"></div>
+        <div class="petalo p2"></div>
+        <div class="petalo p3"></div>
+        <div class="petalo p4"></div>
+        <div class="centro-flor"></div>
+    </div>
+
+    <div class="tallo tallo1"></div>
+    <div class="tallo tallo2"></div>
+    <div class="tallo tallo3"></div>
+
+    <div class="envoltura-ramo"></div>
+
+</div>
+
+    </div>
+
+
+    <script src="script_v2.js"></script>
 </body>
 </html>
